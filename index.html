@@ -5,6 +5,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Creating the trapezium shape*/
+      .shape {
+        height: 0;
+        width: 100px;
+        border-left: 100px solid transparent;
+        border-bottom: 100px solid transparent;
+        border-top: 100px solid rgb(59 130 246);
+        border-right: 100px solid rgb(59 130 246);
+      }
+      tr {
+        border-bottom: rgb(161 161 170 / var(--tw-text-opacity)) solid 1px;
+      }
+      td {
+        padding: 2px 0px;
+      }
+    </style>
   </head>
-  <body class=""></body>
+  <body class="flex justify-center items-center bg-zinc-600">
+    <div class="w-[55%] bg-white">
+      <!-- Header -->
+      <div class="bg-white h-28 flex items-center justify-center mb-5">
+        <div
+          class="bg-transparent flex items-center text-2xl font-bold justify-start h-full w-[35%] ps-4"
+        >
+          <h1 class="uppercase pl-2 lg:pl-10 pr-10">logo</h1>
+        </div>
+
+        <div
+          class="w-full flex-1 h-full overflow-hidden flex items-center justify-center relative"
+        >
+          <!-- <div class="relative h-[200%] w-32 bg-white overflow-hidden">
+          <div class="bg-blue-500 w-full h-full absolute -rotate-[45deg] -top-10 left-4"></div>
+        </div> -->
+          <div class="shape"></div>
+          <div
+            class="w-full h-full bg-blue-500 flex flex-col gap-3 items-center justify-between text-white pr-2"
+          >
+            <h1
+              class="text-4xl lg:text-5xl font-semibold lg:font-black w-full text-right pt-2 pe-12"
+            >
+              Invoice
+            </h1>
+            <div
+              class="flex flex-col sm:flex-row gap-0 sm:gap-2 text-xs items-start justify-start w-full pb-0.5 sm:pb-2 pe-12"
+            >
+              <h1 class="font-semibold flex items-center justify-end w-full">
+                Invoice No:
+                <span class="text-xs lg:text-sm font-light"> #8726gb78 </span>
+              </h1>
+              <h1
+                class="font-semibold flex items-center justify-end w-full sm:w-fit"
+              >
+                Date:
+                <span class="text-xs lg:text-sm font-light"> 27.09.2003 </span>
+              </h1>
+            </div>
+          </div>
+          <div class="h-1 bg-white absolute w-full bottom-10 lg:bottom-8"></div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="px-14">
+        <div class="flex justify-between mb-3">
+          <div>
+            <p class="font-bold">Invoice To:</p>
+            <p class="text-zinc-400">Lowel H.Domingue</p>
+            <p class="text-zinc-400">United Kingdom</p>
+            <p class="text-zinc-400">lowel@gmail.com</p>
+          </div>
+          <div class="text-right">
+            <p class="font-bold">Pay to:</p>
+            <p class="text-zinc-400">Laralink Ltd</p>
+            <p class="text-zinc-400">86-90 Paul Street, London</p>
+            <p class="text-zinc-400">England EC2A 4NE</p>
+            <p class="text-zinc-400">demo@gmail.com</p>
+          </div>
+        </div>
+        <table class="w-full">
+          <tr class="bg-blue-500 text-left text-white">
+            <th class="p-4 w-[20%]">Item</th>
+            <th>Description</th>
+            <th class="ps-2">Price</th>
+            <th>Qty</th>
+            <th class="text-right pe-4">Total</th>
+          </tr>
+          <tr class="text-left text-zinc-400">
+            <td class="w-[25%] p-4">1.Website Design</td>
+            <td class="w-[30%]">
+              Six web page designs and three times revision
+            </td>
+            <td class="w-[18%] ps-2">$350</td>
+            <td class="w-[18%]">1</td>
+            <td class="text-right pe-4">$350</td>
+          </tr>
+          <tr class="text-left text-zinc-400">
+            <td class="w-[25%] p-4">1.Website Design</td>
+            <td class="w-[30%]">
+              Six web page designs and three times revision
+            </td>
+            <td class="w-[18%] ps-2">$350</td>
+            <td class="w-[18%]">1</td>
+            <td class="text-right pe-4">$350</td>
+          </tr>
+          <tr class="text-left text-zinc-400">
+            <td class="w-[25%] p-4">1.Website Design</td>
+            <td class="w-[30%]">
+              Six web page designs and three times revision
+            </td>
+            <td class="w-[18%] ps-2">$350</td>
+            <td class="w-[18%]">1</td>
+            <td class="text-right pe-4">$350</td>
+          </tr>
+          <tr class="text-left text-zinc-400">
+            <td class="w-[25%] p-4">1.Website Design</td>
+            <td class="w-[30%]">
+              Six web page designs and three times revision
+            </td>
+            <td class="w-[18%] ps-2">$350</td>
+            <td class="w-[18%]">1</td>
+            <td class="text-right pe-4">$350</td>
+          </tr>
+        </table>
+
+        <div class="flex justify-between">
+          <div class="mt-2">
+            <p class="font-bold">Payment info:</p>
+            <p class="text-zinc-400">Credit Card - 236**********928</p>
+            <p class="text-zinc-400">Amount:$1732</p>
+          </div>
+          <div class="border w-[44%]">
+            <div class="flex justify-between border-b p-3 font-bold">
+              <p>Subtotal:</p>
+              <p>$1650</p>
+            </div>
+            <div class="flex justify-between border-b p-3">
+              <p>Tax<span class="text-zinc-400">(5%)</span></p>
+              <p>+$82</p>
+            </div>
+            <div
+              class="flex justify-between border-b p-3 bg-blue-500 font-bold text-white"
+            >
+              <p>Grand Total:</p>
+              <p>$1732</p>
+            </div>
+          </div>
+        </div>
+        <div class="px-20 flex justify-end my-8">
+          <div>
+            <div class="text-lg font-bold">signature here</div>
+            <p class="text-zinc-400">John Donate</p>
+            <p class="font-[600]">Accounts Manger</p>
+          </div>
+        </div>
+        <hr />
+
+        <footer class="px-17 pb-40">
+          <p class="text-center font-bold mt-5">Terms & Conditions:</p>
+          <p class="text-center">
+            All claims relating to quantity or shipping errors or shall be
+            waived Byer unless made in writting to Seller with in thirdy (30)
+            days after delivery of goods to the address stated
+          </p>
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>
