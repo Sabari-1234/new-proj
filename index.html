@@ -21,10 +21,15 @@
       td {
         padding: 2px 0px;
       }
+      th {
+        background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+      }
     </style>
   </head>
-  <body class="flex justify-center items-center bg-zinc-600">
-    <div class="md:w-[55%] bg-white">
+  <body
+    class="md:flex md:justify-center md:items-center bg-zinc-600 min-w-[375px]"
+  >
+    <div class="lg:w-[55%] bg-white sm:w-full">
       <!-- Header -->
       <div class="bg-white h-28 flex items-center justify-center mb-5">
         <div
@@ -67,7 +72,7 @@
         </div>
       </div>
       <!-- footer -->
-      <div class="px-14">
+      <div class="md:px-14 px-4">
         <div class="flex justify-between mb-3">
           <div>
             <p class="font-bold">Invoice To:</p>
@@ -84,11 +89,14 @@
           </div>
         </div>
         <table class="w-full">
-          <tr class="bg-blue-500 text-left text-white">
+          <tr
+            class="text-left text-white"
+            style="background-color: rgb(59 130 246 / var(--tw-bg-opacity))"
+          >
             <th class="p-4 w-[20%]">Item</th>
             <th>Description</th>
             <th class="ps-2">Price</th>
-            <th>Qty</th>
+            <th class="text-left">Qty</th>
             <th class="text-right pe-4">Total</th>
           </tr>
           <tr class="text-left text-zinc-400">
@@ -152,7 +160,7 @@
             </div>
           </div>
         </div>
-        <div class="px-20 flex justify-end my-8">
+        <div class="px-20 flex md:justify-end py-8 justify-center border-b-2">
           <div>
             <div class="text-lg font-bold">signature here</div>
             <p class="text-zinc-400">John Donate</p>
